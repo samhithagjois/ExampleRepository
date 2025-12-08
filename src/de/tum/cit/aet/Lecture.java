@@ -176,5 +176,9 @@ public class Lecture {
      public void addGuestStudents(int amount){
         this.numberOfGuestStudents += amount;
     
-     }
+    }
+
+    public double ratioOfStudentsToGuests(){
+        return (getNumberOfGuestStudents()/getNumberOfInscribedStudents())*100;
+    }
 }
