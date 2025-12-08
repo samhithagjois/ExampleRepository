@@ -24,6 +24,7 @@ public class Lecture {
     private int numberOfGuestStudents;
     private int numberOfLecturers;
     private int numberOfTutors;
+    private int numberOfAlumni;
 
     public Lecture(String lectureName, int numberOfInscribedStudents,int numberOfGuestStudents, int numberOfLecturers, int numberOfTutors) {
         this.lectureName = lectureName;
@@ -176,5 +177,9 @@ public class Lecture {
      public void addGuestStudents(int amount){
         this.numberOfGuestStudents += amount;
     
+     }
+     
+     public void addAlumni(int alumniCount) {
+        numberOfAlumni += alumniCount;
      }
 }
