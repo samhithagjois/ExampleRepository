@@ -16,10 +16,9 @@ public class Lecture {
     private int numberOfLecturers;
     private int numberOfTutors;
     //We will have to add the amount of guest students that will start next semester 
-    // as the variable newGuestStudentsNextSem
+    private int guestStudentsFromNextSem;
     //We also need the variable alumni
-    private int alumni;
-    private int newGuestStudentsNextSem;
+
     
     public Lecture(String lectureName, int numberOfInscribedStudents,int numberOfGuestStudents, int numberOfLecturers, int numberOfTutors) {
         this.lectureName = lectureName;
@@ -97,8 +96,8 @@ public class Lecture {
     
     }
 
-    public void addAlumni(int amount){
-        this.alumni += amount;
+    public void addNewStudentsFromNextSem(int amount){
+        this.numberOfGuestStudents += amount;
     }
 
     public double ratioOfStudentsToGuestsInNextSemester(int newGuestStudents){
