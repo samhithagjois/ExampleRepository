@@ -182,4 +182,8 @@ public class Lecture {
      public void addAlumni(int alumniCount) {
         this.numberOfAlumni += alumniCount;
      }
+
+    public double ratioOfStudentsToGuestsInNextSemester(int newGuestStudents){
+        return (newGuestStudents+getNumberOfGuestStudents()/getNumberOfInscribedStudents());
+    }
 }
