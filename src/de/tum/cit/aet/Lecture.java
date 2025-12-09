@@ -17,8 +17,10 @@ public class Lecture {
     private int numberOfTutors;
     private int alumniStudents;
     private int newGuestStudentsForNextSem;
+    private int numberOfRecurringTutors;
+    private int newGuestStudentsNextSem;
     
-    public Lecture(String lectureName, int numberOfInscribedStudents,int numberOfGuestStudents, int numberOfLecturers, int numberOfTutors) {
+    public Lecture(String lectureName, int numberOfInscribedStudents,int numberOfGuestStudents, int numberOfLecturers, int numberOfTutors, int numberOfRecurringTutors) {
         this.lectureName = lectureName;
         this.numberOfGuestStudents = numberOfGuestStudents;
         this.numberOfInscribedStudents = numberOfInscribedStudents;
@@ -66,7 +68,16 @@ public class Lecture {
         this.numberOfTutors = numberOfTutors;
     }
 
-    //from here on start the methods!
+     public int getNumberOfRecurringTutors() {
+        return numberOfRecurringTutors;
+    }
+
+    public void setnumberOfRecurringTutors(int numberOfRecurringTutors) {
+        this.numberOfRecurringTutors = numberOfRecurringTutors;
+    }
+
+
+
 
      @Override
      public String toString(){
@@ -87,8 +98,8 @@ public class Lecture {
     }
 
 
-     public void addGuestStudents(int amount){
-        this.numberOfGuestStudents += amount;
+     public double getRatioOfRecurrentTutors(){
+        return (getNumberOfRecurringTutors()/getNumberOfTutors());
     
     }
 
