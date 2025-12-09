@@ -180,6 +180,6 @@ public class Lecture {
      }
      
      public void addAlumni(int alumniCount) {
-        numberOfAlumni += alumniCount;
+        this.numberOfAlumni += alumniCount;
      }
 }
