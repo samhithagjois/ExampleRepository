@@ -15,9 +15,6 @@ public class Lecture {
     private int numberOfGuestStudents;
     private int numberOfLecturers;
     private int numberOfTutors;
-    //We will have to add the amount of guest students that will start next semester 
-    // as the variable newGuestStudentsNextSem
-    //We also need the variable alumni
     private int alumni;
     private int newGuestStudentsNextSem;
     
@@ -91,13 +88,12 @@ public class Lecture {
     }
 
 
-
      public void addGuestStudents(int amount){
         this.numberOfGuestStudents += amount;
     
     }
 
-    public void addAlumni(int amount){
+    public void addNewAlumni(int amount){
         this.alumni += amount;
     }
 
