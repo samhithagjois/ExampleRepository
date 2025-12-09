@@ -15,8 +15,8 @@ public class Lecture {
     private int numberOfGuestStudents;
     private int numberOfLecturers;
     private int numberOfTutors;
-    private int alumni;
-    private int newGuestStudentsNextSem;
+    private int alumniStudents;
+    private int newGuestStudentsForNextSem;
     
     public Lecture(String lectureName, int numberOfInscribedStudents,int numberOfGuestStudents, int numberOfLecturers, int numberOfTutors) {
         this.lectureName = lectureName;
@@ -66,7 +66,7 @@ public class Lecture {
         this.numberOfTutors = numberOfTutors;
     }
 
-
+    //from here on start the methods!
 
      @Override
      public String toString(){
@@ -76,7 +76,6 @@ public class Lecture {
     public int getTotalNumberOfStudents(){
         return getNumberOfGuestStudents() + getNumberOfInscribedStudents();
     }
-
 
 
      public String getNameAndTotalNumberOfStudents(){
@@ -94,9 +93,10 @@ public class Lecture {
     }
 
     public void addNewAlumni(int amount){
-        this.alumni += amount;
+        this.alumniStudents += amount;
     }
 
+    
     public double ratioOfStudentsToGuestsInNextSemester(int newGuestStudents){
         return (newGuestStudents+getNumberOfGuestStudents()/getNumberOfInscribedStudents());
     }
