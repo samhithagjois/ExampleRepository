@@ -18,15 +18,14 @@ public class Lecture {
     private int alumniStudents;
     private int lectureCapacity;
     private int numberOfRecurringTutors;
-   // private int newGuestStudentsNextSem; we don't need this variable anymore
     
-    public Lecture(String lectureName, int numberOfInscribedStudents,int numberOfGuestStudents, int numberOfLecturers, int numberOfTutors, int capacity) {
+    public Lecture(String lectureName, int numberOfInscribedStudents,int numberOfGuestStudents, int numberOfLecturers, int numberOfTutors, int lectureCapacity) {
         this.lectureName = lectureName;
         this.numberOfGuestStudents = numberOfGuestStudents;
         this.numberOfInscribedStudents = numberOfInscribedStudents;
         this.numberOfLecturers = numberOfLecturers;
         this.numberOfTutors = numberOfTutors;
-        this.lectureCapacity = capacity;        
+        this.lectureCapacity = lectureCapacity;        
     }
 
     public String getLectureName() {
@@ -104,12 +103,14 @@ public class Lecture {
     
     }
 
-    public void addNewAlumni(int amount){
-        this.alumniStudents += amount;
+    
+    public boolean addStudents(int amount){
+        setNumberOfInscribedStudents(getNumberOfInscribedStudents + amount);
+        return isInCapacity();
     }
 
     
-   public double ratioOfStudentsToGuests(){
+   public double studentToGuestRatio(){
     return (getNumberOfGuestStudents()/getTotalNumberOfStudents());
     }
 
