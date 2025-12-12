@@ -17,7 +17,7 @@ public class Lecture {
     private int numberOfTutors;
     private int alumniStudents;
     private int lectureCapacity;
-    private int numberOfRecurringTutors;
+    private int recurringTutors;
     
     public Lecture(String lectureName, int numberOfInscribedStudents,int numberOfGuestStudents, int numberOfLecturers, int numberOfTutors, int lectureCapacity) {
         this.lectureName = lectureName;
