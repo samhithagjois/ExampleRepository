@@ -18,7 +18,7 @@ public class Lecture {
     private int alumniStudents;
     private int newGuestStudentsForNextSem;
     private int numberOfRecurringTutors;
-    private int newGuestStudentsNextSem;
+   // private int newGuestStudentsNextSem; we don't need this variable anymore
     
     public Lecture(String lectureName, int numberOfInscribedStudents,int numberOfGuestStudents, int numberOfLecturers, int numberOfTutors, int numberOfRecurringTutors) {
         this.lectureName = lectureName;
@@ -108,7 +108,7 @@ public class Lecture {
     }
 
     
-    public double ratioOfStudentsToGuestsInNextSemester(int newGuestStudents){
-        return (newGuestStudents+getNumberOfGuestStudents()/getNumberOfInscribedStudents());
+   public double ratioOfStudentsToGuests(){
+    return (getNumberOfGuestStudents()/getTotalNumberOfStudents());
     }
 }
