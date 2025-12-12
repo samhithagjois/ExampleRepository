@@ -17,7 +17,7 @@ public class Lecture {
     private int numberOfTutors;
     private int alumniStudents;
     private int lectureCapacity;
-    private int numberOfRecurringTutors;
+    private int numberofRecurringTutors;
     
     public Lecture(String lectureName, int numberOfInscribedStudents,int numberOfGuestStudents, int numberOfLecturers, int numberOfTutors, int lectureCapacity) {
         this.lectureName = lectureName;
@@ -69,11 +69,11 @@ public class Lecture {
     }
 
      public int getNumberOfRecurringTutors() {
-        return numberOfRecurringTutors;
+        return numberofRecurringTutors;
     }
 
     public void setnumberOfRecurringTutors(int numberOfRecurringTutors) {
-        this.numberOfRecurringTutors = numberOfRecurringTutors;
+        this.numberofRecurringTutors = numberOfRecurringTutors;
     }
 
 
@@ -105,8 +105,8 @@ public class Lecture {
 
     
     public boolean addStudents(int amount){
-        setNumberOfInscribedStudents(getNumberOfInscribedStudents + amount);
-        return isInCapacity();
+        //TODO : implement this!
+        return false;
     }
 
     
@@ -114,7 +114,7 @@ public class Lecture {
     return (getNumberOfGuestStudents()/getTotalNumberOfStudents());
     }
 
-    public boolean isInCapacity(){
+    private boolean checkIfInCapacity(){
         return getTotalNumberOfStudents() <= lectureCapacity;
     }
 }
