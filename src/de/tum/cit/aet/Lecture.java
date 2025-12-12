@@ -26,7 +26,7 @@ public class Lecture {
         this.numberOfInscribedStudents = numberOfInscribedStudents;
         this.numberOfLecturers = numberOfLecturers;
         this.numberOfTutors = numberOfTutors;
-        this.capacity = capacity;        
+        this.lectureCapacity = capacity;        
     }
 
     public String getLectureName() {
@@ -114,6 +114,6 @@ public class Lecture {
     }
 
     public boolean isInCapacity(){
-        return getTotalNumberOfStudents() <= capacity;
+        return getTotalNumberOfStudents() <= lectureCapacity;
     }
 }
